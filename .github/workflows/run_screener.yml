@@ -3,11 +3,11 @@ name: Daily Screener
 on:
   schedule:
     - cron: '0 9 * * 1-5'  # 09:00 UTC (17:00 Taipei)
-  workflow_dispatch:
+    workflow_dispatch:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+  runs-on: ubuntu-latest
     env:
       FINMIND_TOKEN: ${{ secrets.FINMIND_TOKEN }}
     steps:
